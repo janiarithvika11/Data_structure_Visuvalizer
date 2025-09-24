@@ -1,0 +1,26 @@
+<footer class="bg-footer">
+    <div class="container pb-4 pt-5">
+        <div class="d-flex justify-content-center">
+            <div class="mt-4">
+                <h3 class="mb-4  text-center"><a href="https://raj-rathod.github.io/DSA-visualisation-in-angular/"
+                        target="new">DSA Visualization</a></h3>
+                <div class="d-flex justify-content-center">
+                    <div class="me-3" *ngFor="let webCrum of webBredcrumb">
+                        <a class="text-uppercase" target="new" aria-current="page"
+                            [href]="webCrum.url">{{webCrum.name}}</a>
+                    </div>
+
+                </div>
+
+                <p class="mt-4 fw-bold text-center">Stay In Touch</p>
+                <div class="d-flex justify-content-center mt-2">
+                    <ng-container *ngFor="let social of socialLinkes">
+                        <a class="ms-3" [href]="social?.url" target="_blank" rel="noopener noreferrer">
+                            <img width="26" height="26" [src]="social?.image" [alt]="social?.name" />
+                        </a>
+                    </ng-container>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
