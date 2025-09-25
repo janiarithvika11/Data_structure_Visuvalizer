@@ -1,7 +1,8 @@
 {
-  "name": "dsa-visualisation",
+  "name": "dsa-visualization-react",
   "description": "DSA Visualization is a project on data structures and algorithms. In this project all points of data structures and algorithms like as working approach, properties, operations, applications, advantages and disadvantages are well explained and visualize the operations for better understanding",
   "version": "0.0.1",
+  "type": "module",
   "keywords": [
     "Dsa",
     "Data structures and algorithms",
@@ -18,48 +19,31 @@
     "dsa project"
   ],
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "lint": "ng lint",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "build:prod": "ng build --configuration production --base-href https://raj-rathod.github.io/DSA-visualisation-in-angular/",
-    "test:headless": "ng test --watch=false --browsers=ChromeHeadless",
-    "start-pwa": "ng build --configuration production && http-server -p 8080 -c-1 dist/dsa-visualisation"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0"
   },
-  "private": true,
   "dependencies": {
-    "@angular/animations": "~12.1.1",
-    "@angular/cdk": "^12.2.13",
-    "@angular/common": "~12.1.1",
-    "@angular/compiler": "~12.1.1",
-    "@angular/core": "~12.1.1",
-    "@angular/forms": "~12.1.1",
-    "@angular/material": "^12.2.13",
-    "@angular/platform-browser": "~12.1.1",
-    "@angular/platform-browser-dynamic": "~12.1.1",
-    "@angular/router": "~12.1.1",
-    "@angular/service-worker": "~12.1.1",
     "@raj-rathod/dsa-methods": "^0.2.0",
-    "bootstrap": "^5.1.3",
+    "@stripe/react-stripe-js": "^4.0.2",
+    "@stripe/stripe-js": "^7.9.0",
     "prismjs": "^1.29.0",
-    "rxjs": "~6.6.0",
-    "tslib": "^2.2.0",
-    "zone.js": "~0.11.4"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.1"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~12.1.1",
-    "@angular/cli": "~12.1.1",
-    "@angular/compiler-cli": "~12.1.1",
-    "@types/jasmine": "~3.6.0",
-    "@types/node": "^12.11.1",
-    "jasmine-core": "~3.7.0",
-    "karma": "~6.3.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.0.3",
-    "karma-jasmine": "~4.0.0",
-    "karma-jasmine-html-reporter": "^1.5.0",
-    "typescript": "~4.3.2"
+    "@types/prismjs": "^1.26.3",
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "@vitejs/plugin-react": "^4.1.1",
+    "eslint": "^8.53.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.4",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.0"
   }
 }
